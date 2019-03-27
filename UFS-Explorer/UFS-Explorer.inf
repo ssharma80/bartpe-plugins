@@ -1,0 +1,28 @@
+; UFS-Explorer.inf
+; PE Builder v3 plug-in INF file for UFS-Explorer (Professional)
+; Plugin created by Demonknight V-1.1 - 11.02.2014
+; http://www.citrustechsolutions.com
+
+
+[Version]
+Signature= "$Windows NT$"
+
+[PEBuilder]
+Name="File -Recovery: UFS-Explorer 5.11"
+Enable=1
+
+[WinntDirectories]
+a="Programs\UFS-Explorer",2
+
+[SourceDisksFolders]
+files=a
+
+[Append]
+nu2menu.xml, UFS-Explorer_nu2menu.xml
+
+[Software.AddReg]
+;0x2,"Sherpya\XPEinit\Programs","File Management\Recovery\UFS-Explorer 5.11\UFS-Explorer","%SystemDrive%\Programs\UFS-Explorer\ufsxpci.exe||%SystemDrive%\Programs\UFS-Explorer\ufsxpci.exe"
+;0x2,"Sherpya\XPEinit\Programs","File Management\Recovery\UFS-Explorer 5.11\EFS-Backup-Restore","%SystemDrive%\Programs\UFS-Explorer\efsrestore.exe||%SystemDrive%\Programs\UFS-Explorer\efsrestore.exe"
+
+;0x2,"Sherpya\XPEinit\Desktop","UFS-Explorer 5.11","%SystemDrive%\Programs\UFS-Explorer\ufsxpci.exe||%SystemDrive%\Programs\UFS-Explorer\ufsxpci.exe"
+;0x2,"Sherpya\XPEinit\Startup","UFS-Explorer 5.11","%SystemDrive%\Programs\UFS-Explorer\ufsxpci.exe||%SystemDrive%\Programs\UFS-Explorer\ufsxpci.exe"

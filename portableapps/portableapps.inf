@@ -1,0 +1,42 @@
+; portableapps.inf
+; PE Builder v3 plug-in INF file for portable apps downloaded from:www.portableapps.com on XPE / BARTPE
+; Created by Demonknight 25/4/12
+; http://www.citrustechsolutions.com
+
+[Version]
+Signature= "$Windows NT$"
+
+[PEBuilder]
+Name="Portable: Utilities"
+Enable=1
+
+[WinntDirectories]
+a="Programs\portableapps",2
+
+[SourceDisksFolders]
+files=a
+
+[Software.AddReg]
+; for XPE-Plugin
+0x2,"Sherpya\XPEinit\Desktop","Firefox","%SystemDrive%\programs\portableapps\FirefoxPortable\run_FirefoxPortable.cmd"
+0x2,"Sherpya\XPEinit\Desktop","Ant Renamer","%SystemDrive%\programs\portableapps\AntRenamerPortable\run_AntRenamerPortable.cmd"
+0x2,"Sherpya\XPEinit\Desktop","Wise Data Recovery","%SystemDrive%\programs\portableapps\WiseDataRecoveryPortable\run_WiseDataRecoveryPortable.cmd"
+0x2,"Sherpya\XPEinit\Desktop","AbiWord","%SystemDrive%\programs\portableapps\AbiWordPortable\run_AbiWordPortable.cmd"
+
+0x2,"Sherpya\XPEinit\Desktop","ClamWin","%SystemDrive%\programs\portableapps\ClamWinPortable\run_ClamWinPortable.cmd"
+0x2,"Sherpya\XPEinit\Desktop","SpyBot S&D","%SystemDrive%\programs\portableapps\SpybotPortable\run_SpybotPortable.cmd"
+0x2,"Sherpya\XPEinit\Desktop","HijackThis v2.0.4","%SystemDrive%\programs\portableapps\HijackThisPortable\run_HijackThisPortable.cmd"
+0x2,"Sherpya\XPEinit\Desktop","Registry Backup & Restore","%SystemDrive%\programs\portableapps\regbak\run_regbak.cmd"
+
+0x2,"Sherpya\XPEinit\Desktop","Disk Cleaner","%SystemDrive%\programs\portableapps\DiskCleanerPortable\run_DiskCleanerPortable.cmd"
+0x2,"Sherpya\XPEinit\Desktop","Smart Defrag","%SystemDrive%\programs\portableapps\SmartDefragPortable\run_SmartDefragPortable.cmd"
+0x2,"Sherpya\XPEinit\Desktop","GetBackData FAT","%SystemDrive%\programs\portableapps\GetDataBackPortable\run_GetDataBack_FAT_v4.0.0.1.cmd"
+0x2,"Sherpya\XPEinit\Desktop","GetBackData NTFS","%SystemDrive%\programs\portableapps\GetDataBackPortable\run_GetDataBack_NTFS_v4.0.0.1.cmd"
+
+0x2,"Sherpya\XPEinit\Desktop","AbiWord","%SystemDrive%\programs\portableapps\AbiwordPortable\run_AbiWordPortable.cmd"
+;0x2,"Sherpya\XPEinit\Programs","AbiWord","%SystemDrive%\programs\portableapps\AbiwordPortable\run_AbiWordPortable.cmd"
+;0x2,"Sherpya\XPEinit\Startup","AbiWord","%SystemDrive%\programs\portableapps\AbiwordPortable\run_AbiWordPortable.cmd"
+;
+
+[Append]
+nu2menu.xml, portableapps_nu2menu.xml

@@ -1,0 +1,9 @@
+<!-- Nu2Menu entry -->
+<NU2MENU>
+	<MENU ID="Programs">
+		<MITEM TYPE="POPUP" MENUID="Network Tools">Networking Tools</MITEM>
+	</MENU>
+	<MENU ID="Network Tools">
+		<MITEM TYPE="ITEM" DISABLED="@Not(@FileExists(@GetProgramDrive()\Programs\ftpserver\smallftpd.exe))" CMD="RUN" FUNC="@GetProgramDrive()\Programs\ftpserver\smallftpd.exe">SmallFTPD Server</MITEM>
+	</MENU>
+</NU2MENU>

@@ -1,0 +1,11 @@
+<!-- Nu2Menu entry for Single Click UVNC -->
+<NU2MENU>
+    <MENU ID="Programs">
+        <MITEM TYPE="POPUP" MENUID="Network Tools">Networking Tools</MITEM>
+    </MENU>
+    <MENU ID="Network Tools">
+        <MITEM TYPE="ITEM" CMD="RUN" FUNC="@GetProgramDrive()\Programs\cports\cports.exe">Current Open Ports</MITEM>
+		<MITEM TYPE="ITEM" CMD="RUN" FUNC="@GetProgramDrive()\Programs\netpass\netpass.exe">Network Passwords</MITEM>
+		<MITEM TYPE="ITEM" CMD="RUN" FUNC="@GetProgramDrive()\Programs\wnetview\WirelessNetView.exe.exe">Wireless Networks</MITEM>
+    </MENU>
+</NU2MENU>

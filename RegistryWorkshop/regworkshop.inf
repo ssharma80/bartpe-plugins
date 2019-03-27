@@ -1,0 +1,56 @@
+; regworkshop.inf
+; PE Builder v3 plug-in INF file for Torch Registry Workshop 4.2.6
+; Created by Demonknight 25/8/11
+; http://www.citrustechsolutions.com
+
+[Version]
+Signature= "$Windows NT$"
+
+[PEBuilder]
+Name="Registry Tools: Torch Registry Workshop "
+Enable=1
+
+[WinntDirectories]
+a="Programs\RegistryWorkshop",2
+
+[SourceDisksFolders]
+files=a
+
+[Append]
+nu2menu.xml, registryworkshop_nu2menu.xml
+
+[Software.AddReg]
+;0x2,"Sherpya\XPEinit\Programs","Registry Tools\Registry Workshop 4.2.6","%SystemDrive%\Programs\RegistryWorkshop\TorchReg.cmd||%SystemDrive%\Programs\RegistryWorkshop\RegWorkshop.exe"
+
+0x2,"Sherpya\XPEinit\Desktop","Registry Workshop 4.2.6","%SystemDrive%\Programs\RegistryWorkshop\TorchReg.cmd||%SystemDrive%\Programs\RegistryWorkshop\RegWorkshop.exe"
+;0x2,"Sherpya\XPEinit\Startup","UFS-Explorer 5.11","%SystemDrive%\Programs\UFS-Explorer\ufsxpci.exe||%SystemDrive%\Programs\UFS-Explorer\ufsxpci.exe"
+
+[Software.AddReg]
+0x1, "Classes\reg","","URL:Reg Protocol"
+0x1, "Classes\reg","URL Protocol",""
+0x1, "Classes\reg\shell\open\command","","""%SystemDrive%\programs\registryworkshop\RegWorkshop.exe"" /g ""%1"""
+0x4, "Classes\regfile\shell","EditFlags", 0x52faedf7
+0x1, "Classes\regfile\shell\Edit with Registry Workshop","","Registry &Workshop"
+0x1, "Classes\regfile\shell\Edit with Registry Workshop\command","","""%SystemDrive%\programs\registryworkshop\RegWorkshop.exe"" ""%1"""
+
+[Default.AddReg]
+0x1, "Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.txt\OpenWithList","a","NOTEPAD.EXE"
+0x1, "Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.txt\OpenWithList","MRUList","a"
+0x3, "Software\Microsoft\Windows\CurrentVersion\Explorer\UserAssist\{75048700-EF1F-11D0-9888-006097DEACF9}\Count","HRZR_EHACNGU:Ertvfgel Jbexfubc.yax",\
+  03,00,00,00,07,00,00,00,60,a2,20,b8,a4,27,cf,01
+0x3, "Software\Microsoft\Windows\CurrentVersion\Explorer\UserAssist\{75048700-EF1F-11D0-9888-006097DEACF9}\Count","HRZR_EHACNGU:P:\Cebtenz Svyrf\Ertvfgel Jbexfubc\ErtJbexfubc.rkr",\
+  03,00,00,00,07,00,00,00,e0,f1,32,b8,a4,27,cf,01
+0x3, "Software\Microsoft\Windows\CurrentVersion\Explorer\UserAssist\{75048700-EF1F-11D0-9888-006097DEACF9}\Count","HRZR_EHACNGU:P:\JVAQBJF\flfgrz32\ABGRCNQ.RKR",\
+  03,00,00,00,07,00,00,00,e0,b3,25,ae,a4,27,cf,01
+0x1, "Software\Microsoft\Windows\ShellNoRoam\Bags\4\Shell","FolderType","Documents"
+0x1, "Software\Microsoft\Windows\ShellNoRoam\MUICache","%SystemDrive%\programs\registryworkshop\RegWorkshop.exe","Registry Workshop"
+0x1, "Software\Microsoft\Windows\ShellNoRoam\MUICache","@shell32.dll,-31242","Rename this file"
+0x1, "Software\Microsoft\Windows\ShellNoRoam\MUICache","@shell32.dll,-31244","Move this file"
+0x1, "Software\Microsoft\Windows\ShellNoRoam\MUICache","@shell32.dll,-31246","Copy this file"
+0x1, "Software\Microsoft\Windows\ShellNoRoam\MUICache","@shell32.dll,-31248","Publish this file to the Web"
+0x1, "Software\Microsoft\Windows\ShellNoRoam\MUICache","@shell32.dll,-31370","E-mail this file"
+0x1, "Software\Microsoft\Windows\ShellNoRoam\MUICache","@shell32.dll,-31250","Print this file"
+0x1, "Software\Microsoft\Windows\ShellNoRoam\MUICache","@shell32.dll,-31252","Delete this file"
+0x1, "Software\Microsoft\Windows\ShellNoRoam\MUICache","%SystemRoot%\system32\NOTEPAD.EXE","Notepad"
+0x1, "Software\Microsoft\Windows\ShellNoRoam\MUICache","C:\Program Files\Windows NT\Accessories\WORDPAD.EXE","WordPad"
+0x1, "Software\Microsoft\Windows\ShellNoRoam\MUICache","%SystemRoot%\system32\logon.scr","Logon Screen Saver"

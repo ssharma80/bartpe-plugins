@@ -1,0 +1,26 @@
+; ultrasurf.inf
+; PE Builder v3 plug-in INF file for Ultrasurf on XPE / BARTPE
+; Created by Demonknight 25/4/10
+; http://www.citrustechsolutions.com
+
+[Version]
+Signature= "$Windows NT$"
+
+[PEBuilder]
+Name="[Proxy Surf] Ultra Surf 12.02"
+Enable=1
+
+
+[Software.AddReg]
+;0x2,"Sherpya\XPEinit\Programs","Networking Tools\Ultrasurf\u.exe","%SystemDrive%\Programs\ultrasurf\u.exe|%SystemDrive%\Programs\ultrasurf\u.exe|%SystemDrive%\Programs\ultrasurf\u.exe,0"
+;0x2,"Sherpya\XPEinit\Startup","UltraSurf 12.02","%SystemDrive%\Programs\ultrasurf\u.exe"
+
+[WinntDirectories]
+a="Programs\ultrasurf",2
+
+[SourceDisksFiles]
+u.exe=a,,1
+
+[Append]
+nu2menu.xml, ultrasurf_nu2menu.xml
+

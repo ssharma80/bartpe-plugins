@@ -1,0 +1,13 @@
+<!-- Nu2Menu entry for ufsexplorer -->
+<NU2MENU>
+	<MENU ID="Programs">
+		<MITEM TYPE="POPUP" MENUID="File Management">File Management</MITEM>
+	</MENU>
+	<MENU ID="File Management">
+		<MITEM TYPE="POPUP" MENUID="Recovery">Recovery</MITEM>
+	</MENU>				
+	<MENU ID="Recovery">	   		
+		<MITEM TYPE="ITEM" DISABLED="@Not(@FileExists(@GetProgramDrive()\Programs\UFS-Explorer\ufsxpci.exe))" CMD="RUN" FUNC="@GetProgramDrive()\Programs\UFS-Explorer\ufsxpci.exe">UFS-Explorer 5.11</MITEM>
+		<MITEM TYPE="ITEM" DISABLED="@Not(@FileExists(@GetProgramDrive()\Programs\UFS-Explorer\efsrestore.exe))" CMD="RUN" FUNC="@GetProgramDrive()\Programs\UFS-Explorer\efsrestore.exe">EFS-Backup-Restorer 5.11</MITEM>
+	</MENU>
+</NU2MENU>

@@ -1,0 +1,40 @@
+; ntools.inf
+; PE Builder v3 plug-in INF file for finding open ports, network password and WLAN info
+; Created by Demonknight 25/4/10
+; http://www.citrustechsolutions.com
+
+[Version]
+Signature= "$Windows NT$"
+
+[PEBuilder]
+Name="Networking Tools : Cports, Netpass, WirelessNetView"
+Enable=1
+
+
+[Software.AddReg]
+; Uncomment for Sherpya XPE
+;0x2,"Sherpya\XPEinit\Programs","Networking Tools\Cports","%SystemDrive%\Programs\cports\cports.exe|%SystemDrive%\Programs\cports\cports.exe|%SystemDrive%\Programs\cports\cports.exe,0"
+
+;0x2,"Sherpya\XPEinit\Programs","Networking Tools\Netpass","%SystemDrive%\Programs\netpass\netpass.exe|%SystemDrive%\Programs\netpass\netpass.exe|%SystemDrive%\Programs\netpass\netpass.exe,0"
+
+;0x2,"Sherpya\XPEinit\Programs","Networking Tools\wnetview","%SystemDrive%\Programs\wnetview\WirelessNetView.exe|%SystemDrive%\Programs\wnetview\WirelessNetView.exe|%SystemDrive%\Programs\wnetview\WirelessNetView.exe,0"
+
+
+[WinntDirectories]
+a="Programs\cports",2
+b="Programs\netpass",2
+c="Programs\wnetview",2
+
+[SourceDisksFiles]
+cports\cports.cfg=a,,1
+cports\cports.exe=a,,1
+cports\cports.chm=a,,1
+netpass\netpass.chm=b,,1
+netpass\netpass.exe=b,,1
+wnetview\WirelessNetView.cfg=c,,1
+wnetview\WirelessNetView.chm=c,,1
+wnetview\WirelessNetView.exe=c,,1
+
+[Append]
+nu2menu.xml, ntools_nu2menu.xml
+

@@ -1,0 +1,18 @@
+<!-- Nu2Menu entry for Portable Apps -->
+<NU2MENU>
+	<MENU ID="Programs">
+		<MITEM TYPE="POPUP" MENUID="PortableApps">Portable Apps</MITEM>
+	</MENU>
+     <MENU ID="PortableApps">      
+		<MITEM TYPE="ITEM" DISABLED="@Not(@FileExists(@GetProgramDrive()\Programs\portabelapps\AbiWordPortable\AbiWordPortable.exe))" CMD="RUN" FUNC="@GetProgramDrive()\Programs\portabelapps\AbiWordPortable\AbiWordPortable.exe">Abiword</MITEM>
+		<MITEM TYPE="ITEM" DISABLED="@Not(@FileExists(@GetProgramDrive()\Programs\portabelapps\FirefoxPortable\FirefoxPortable.exe))" CMD="RUN" FUNC="@GetProgramDrive()\Programs\portabelapps\FirefoxPortable\FirefoxPortable.exe">FireFox Browser</MITEM>
+		<MITEM TYPE="ITEM" DISABLED="@Not(@FileExists(@GetProgramDrive()\Programs\portabelapps\IronPortable\IronPortable.exe))" CMD="RUN" FUNC="@GetProgramDrive()\Programs\portabelapps\IronPortable\IronPortable.exe">Iron Browser</MITEM>
+		<MITEM TYPE="ITEM" DISABLED="@Not(@FileExists(@GetProgramDrive()\Programs\portabelapps\PeerBlockPortable\peerblock.exe))" CMD="RUN" FUNC="@GetProgramDrive()\Programs\portabelapps\PeerBlockPortable\peerblock.exe">PeerBlock</MITEM>
+		<MITEM TYPE="ITEM" DISABLED="@Not(@FileExists(@GetProgramDrive()\Programs\portabelapps\ClamWinPortable\ClamWinPortable.exe))" CMD="RUN" FUNC="@GetProgramDrive()\Programs\portabelapps\ClamWinPortable\ClamWinPortable.exe">ClamWin Antivirus</MITEM>
+		<MITEM TYPE="ITEM" DISABLED="@Not(@FileExists(@GetProgramDrive()\Programs\portabelapps\SpybotPortable\SpybotPortable.exe))" CMD="RUN" FUNC="@GetProgramDrive()\Programs\portabelapps\SpybotPortable\SpybotPortable.exe">Spybot</MITEM>
+		<MITEM TYPE="ITEM" DISABLED="@Not(@FileExists(@GetProgramDrive()\Programs\portabelapps\DiskCleanerPortable\DiskCleanerPortable.exe))" CMD="RUN" FUNC="@GetProgramDrive()\Programs\portabelapps\DiskCleanerPortable\DiskCleanerPortable.exe">Disk Cleaner</MITEM>
+		<MITEM TYPE="ITEM" DISABLED="@Not(@FileExists(@GetProgramDrive()\Programs\portabelapps\JkDefragPortable\JkDefragPortable.exe))" CMD="RUN" FUNC="@GetProgramDrive()\Programs\portabelapps\JkDefragPortable\JkDefragPortable.exe">JK Defragger</MITEM>
+		<MITEM TYPE="ITEM" DISABLED="@Not(@FileExists(@GetProgramDrive()\Programs\portabelapps\SmartDefragPortable\SmartDefragPortable.exe))" CMD="RUN" FUNC="@GetProgramDrive()\Programs\portabelapps\SmartDefragPortable\SmartDefragPortable.exe">Smart Deragger</MITEM>
+		<MITEM TYPE="ITEM" DISABLED="@Not(@FileExists(@GetProgramDrive()\Programs\portabelapps\Acronis.exe))" CMD="RUN" FUNC="@GetProgramDrive()\Programs\portabelapps\Acronis.exe">Acronis True Image</MITEM>
+     </MENU>
+</NU2MENU>

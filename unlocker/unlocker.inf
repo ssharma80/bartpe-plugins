@@ -1,0 +1,59 @@
+; unlocker.inf
+; PE Builder v3 plug-in INF file for Unlocker Uitlity on XPE / BARTPE
+; Created by Demonknight 25/4/10
+; http://www.citrustechsolutions.com
+
+[Version]
+Signature= "$Windows NT$"
+
+[PEBuilder]
+Name="Unlocker 1.8.5"
+Enable=1
+
+[WinntDirectories]
+a="Programs\unlocker",2
+
+[SourceDisksFolders]
+files=a
+
+
+[Software.AddReg]
+0x1, "Classes\AllFilesystemObjects\shellex\ContextMenuHandlers\UnlockerShellExtension","","{DDE4BEEB-DDE6-48fd-8EB5-035C09923F83}"
+0x1, "Classes\CLSID\{DDE4BEEB-DDE6-48fd-8EB5-035C09923F83}","","UnlockerShellExtension"
+0x1, "Classes\CLSID\{DDE4BEEB-DDE6-48fd-8EB5-035C09923F83}\InProcServer32","","%SystemDrive%\Programs\unlocker\UnlockerCOM.dll"
+0x1, "Classes\CLSID\{DDE4BEEB-DDE6-48fd-8EB5-035C09923F83}\InProcServer32","ThreadingModel","Apartment"
+0x1, "Classes\Folder\shellex\ContextMenuHandlers\UnlockerShellExtension","","{DDE4BEEB-DDE6-48fd-8EB5-035C09923F83}"
+0x1, "Classes\AllFilesystemObjects\shellex\ContextMenuHandlers\UnlockerShellExtension","","{DDE4BEEB-DDE6-48fd-8EB5-035C09923F83}"
+0x1, "Classes\CLSID\{DDE4BEEB-DDE6-48fd-8EB5-035C09923F83}","","UnlockerShellExtension"
+0x1, "Classes\CLSID\{DDE4BEEB-DDE6-48fd-8EB5-035C09923F83}\InProcServer32","","%SystemDrive%\Programs\unlocker\UnlockerCOM.dll"
+0x1, "Classes\CLSID\{DDE4BEEB-DDE6-48fd-8EB5-035C09923F83}\InProcServer32","ThreadingModel","Apartment"
+0x1, "Classes\Folder\shellex\ContextMenuHandlers\UnlockerShellExtension","","{DDE4BEEB-DDE6-48fd-8EB5-035C09923F83}"
+0x1, "Microsoft\Windows\CurrentVersion\App Paths\Unlocker.exe","","%SystemDrive%\Programs\unlocker\Unlocker.exe"
+0x1, "Microsoft\Windows\CurrentVersion\Shell Extensions\Approved","{DDE4BEEB-DDE6-48fd-8EB5-035C09923F83}","UnlockerShellExtension"
+0x1, "Microsoft\Windows\CurrentVersion\Uninstall\Unlocker","Language","1033"
+0x1, "Microsoft\Windows\CurrentVersion\Uninstall\Unlocker","DisplayName","Unlocker 1.8.5"
+0x1, "Microsoft\Windows\CurrentVersion\Uninstall\Unlocker","UninstallString","%SystemDrive%\Programs\unlocker\uninst.exe"
+0x1, "Microsoft\Windows\CurrentVersion\Uninstall\Unlocker","DisplayIcon","%SystemDrive%\Programs\unlocker\Unlocker.exe"
+0x1, "Microsoft\Windows\CurrentVersion\Uninstall\Unlocker","DisplayVersion","1.8.5"
+0x1, "Microsoft\Windows\CurrentVersion\Uninstall\Unlocker","URLInfoAbout","http://ccollomb.free.fr/unlocker/"
+0x1, "Microsoft\Windows\CurrentVersion\Uninstall\Unlocker","Publisher","Cedrick Collomb"
+0x1, "ControlSet001\Services\UnlockerDriver5","ImagePath","%SystemDrive%\Programs\unlocker\UnlockerDriver5.sys"
+0x4, "ControlSet001\Services\UnlockerDriver5","Type", 0x00000001
+
+0x2,"Sherpya\XPEinit\Startup","Unlocker","%SystemDrive%\Programs\unlocker\UnlockerAssistant.exe"
+0x2,"Sherpya\XPEinit\Programs","Unlocker","%SystemDrive%\Programs\unlocker\Unlocker.exe"
+
+[Default.AddReg]
+0x1, "Software\Microsoft\Windows\CurrentVersion\Explorer\ComDlg32\OpenSaveMRU\*","g","%SystemDrive%\Programs\unlocker\Unlocker.exe"
+0x1, "Software\Microsoft\Windows\CurrentVersion\Explorer\ComDlg32\OpenSaveMRU\exe","e","%SystemDrive%\Programs\unlocker\Unlocker.exe"
+0x1, "Software\Microsoft\Windows\ShellNoRoam\MUICache","@C:\WINDOWS\system32\SHELL32.dll,-9217","My Network Places"
+0x1, "Software\Microsoft\Windows\ShellNoRoam\MUICache","@shell32.dll,-21785","Shared Documents"
+0x1, "Software\Microsoft\Windows\ShellNoRoam\MUICache","%SystemDrive%\Programs\unlocker\Unlocker.exe","unlocker1.8.5"
+0x1, "Software\Microsoft\Windows\CurrentVersion\Explorer\ComDlg32\OpenSaveMRU\*","g","%SystemDrive%\Programs\unlocker\Unlocker.exe"
+0x1, "Software\Microsoft\Windows\CurrentVersion\Explorer\ComDlg32\OpenSaveMRU\exe","e","%SystemDrive%\Programs\unlocker\Unlocker.exe"
+0x1, "Software\Microsoft\Windows\ShellNoRoam\MUICache","@C:\WINDOWS\system32\SHELL32.dll,-9217","My Network Places"
+0x1, "Software\Microsoft\Windows\ShellNoRoam\MUICache","@shell32.dll,-21785","Shared Documents"
+0x1, "Software\Microsoft\Windows\ShellNoRoam\MUICache","%SystemDrive%\Programs\unlocker\Unlocker.exe","unlocker1.8.5"
+
+[Append]
+;nu2menu.xml, unlocker_nu2menu.xml

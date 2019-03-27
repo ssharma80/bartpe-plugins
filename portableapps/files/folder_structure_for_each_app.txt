@@ -1,0 +1,7 @@
+Folders & Files that should be put for each portable app after extraction:
+
+->App
+->Data
+->Other
+->help.html
+->.exe file for e.g - SpybotPortable.exe

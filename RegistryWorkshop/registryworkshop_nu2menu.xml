@@ -1,0 +1,10 @@
+<!-- Nu2Menu entry for RegistryWorkshop -->
+<NU2MENU>
+	<MENU ID="Programs">
+		<MITEM TYPE="POPUP" MENUID="Registry Tools">Registry Tools</MITEM>
+	</MENU>
+	<MENU ID="Registry Tools">
+		<MITEM TYPE="ITEM" DISABLED="@Not(@FileExists(@GetProgramDrive()\Programs\RegistryWorkshop\TorchReg.cmd))" CMD="RUN" FUNC="@GetProgramDrive()\Programs\RegistryWorkshop\TorchReg.cmd">Registry Workshop 4.6.2 [Run as System Profile]</MITEM>
+		<MITEM TYPE="ITEM" DISABLED="@Not(@FileExists(@GetProgramDrive()\Programs\RegistryWorkshop\run_RegWorkshop.cmd))" CMD="RUN" FUNC="@GetProgramDrive()\Programs\RegistryWorkshop\run_RegWorkshop.cmd">Registry Workshop 4.6.2 [Copy to B: and Run]</MITEM>
+	</MENU>
+</NU2MENU>

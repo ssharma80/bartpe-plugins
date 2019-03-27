@@ -1,0 +1,30 @@
+; mrip.inf
+; PE Builder v3 plug-in INF file for Getting IP Address on XPE / BARTPE
+; Created by Demonknight 25/4/10
+; http://www.citrustechsolutions.com
+
+[Version]
+Signature= "$Windows NT$"
+
+[PEBuilder]
+Name="Mr.IP Plugin - Checks IP and Broadcasts on E-mail"
+Enable=0
+
+[WinntDirectories]
+a=Programs\mrip,2
+
+[SourceDisksFiles]
+files\prgs\*.*=a,,1
+files\sys\*.*=2
+
+[Software.AddReg]
+0x4, "Microsoft\Windows\CurrentVersion\SharedDlls","%SystemRoot%\system32\MSWINSCK.OCX", 0x00000002
+0x4, "Microsoft\Windows\CurrentVersion\SharedDlls","%SystemRoot%\system32\MSCOMCTL.OCX", 0x00000002
+0x4, "Microsoft\Windows\CurrentVersion\SharedDlls","%SystemRoot%\system32\vbSendMail.dll", 0x00000002
+
+
+;0x2,"Sherpya\XPEinit\Programs","MrIP","%SystemDrive%\programs\mrip\mrip.cmd"
+0x2,"Sherpya\XPEinit\Startup","MrIP","%SystemDrive%\programs\mrip\mrip.cmd"
+
+
+

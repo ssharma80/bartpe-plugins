@@ -1,0 +1,1 @@
+psexec -i -s -d "%SystemDrive%\programs\RegistryWorkshop\RegWorkshop.exe"
